@@ -1,0 +1,12 @@
+/**
+ * Optional top/bottom section borders, colored from the active
+ * .u-color-scheme-* --cs-border custom property. Read by blocks via the
+ * "Section borders" ACF clone (see App\blocks\BlockSettings).
+ */
+.u-border-top {
+    border-top: 1px solid var(--cs-border, var(--black-20));
+}
+
+.u-border-bottom {
+    border-bottom: 1px solid var(--cs-border, var(--black-20));
+}

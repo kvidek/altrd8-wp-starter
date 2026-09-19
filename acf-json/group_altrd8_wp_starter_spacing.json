@@ -1,0 +1,81 @@
+{
+    "key": "group_altrd8_wp_starter_spacing",
+    "title": "Component - Spacing",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_sw_padding_top",
+            "label": "Padding Top",
+            "name": "padding_top",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "large": "Large",
+                "medium": "Medium",
+                "small": "Small",
+                "none": "None"
+            },
+            "default_value": "medium",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_sw_padding_bottom",
+            "label": "Padding Bottom",
+            "name": "padding_bottom",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "large": "Large",
+                "medium": "Medium",
+                "small": "Small",
+                "none": "None"
+            },
+            "default_value": "medium",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Reusable spacing settings. Cloned into block field groups; not assigned to any post type directly. Choices match the existing .u-pt-*/.u-pb-* utilities in static/scss/utilities/_utilities.spacing.scss (no \"xl\" option exists in this project's utilities, unlike the Villa Argentina source).",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1789030279
+}

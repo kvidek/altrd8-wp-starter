@@ -1,0 +1,170 @@
+{
+    "key": "group_altrd8_wp_starter_component_cta",
+    "title": "Component - CTA",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_component_cta_link",
+            "label": "Link",
+            "name": "link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_cta_button_style",
+            "label": "Button Style",
+            "name": "button_style",
+            "type": "button_group",
+            "instructions": "Maps to the button component's style (partials/components/button.php $style).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "tertiary": "Tertiary"
+            },
+            "default_value": "primary",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_cta_settings",
+            "label": "Settings",
+            "name": "settings",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 1,
+            "acfe_group_modal_close": 1,
+            "acfe_group_modal_button": "Settings",
+            "acfe_group_modal_size": "medium",
+            "sub_fields": [
+                {
+                    "key": "field_altrd8_wp_starter_component_cta_button_id",
+                    "label": "Button ID",
+                    "name": "button_id",
+                    "type": "text",
+                    "instructions": "Optional HTML id attribute on the button. Letters, numbers, hyphens and underscores only.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "e.g. book-stay-cta",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_altrd8_wp_starter_component_cta_action",
+                    "label": "Action",
+                    "name": "action",
+                    "type": "button_group",
+                    "instructions": "Optional behaviour beyond the default link.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "open_modal": "Open modal",
+                        "scroll_to": "Scroll to",
+                        "download": "Download"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_altrd8_wp_starter_component_cta_target_id",
+                    "label": "Target ID",
+                    "name": "target_id",
+                    "type": "text",
+                    "instructions": "Element id to open (modal dialog id) or scroll to (section id). Do not include #.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_altrd8_wp_starter_component_cta_action",
+                                "operator": "==",
+                                "value": "open_modal"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_altrd8_wp_starter_component_cta_action",
+                                "operator": "==",
+                                "value": "scroll_to"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "e.g. booking-modal or contact",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Cloned (seamless, inside a repeater sub-field) wherever a CTA link + button style is needed. Advanced behaviour lives under Settings (opens in an ACF Extended modal): open a modal (Modal.js data-modal-open), scroll to a section id, or force a download. Not assigned to any post type directly.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1788340747
+}

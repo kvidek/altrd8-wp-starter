@@ -1,0 +1,6 @@
+.o-container {
+    // A position:absolute, z-index:0 decorative child (e.g. .c-bg-gradient)
+    // paints above unpositioned in-flow content per CSS stacking rules —
+    // this keeps the container's own content painting on top of it instead.
+    position: relative;
+}

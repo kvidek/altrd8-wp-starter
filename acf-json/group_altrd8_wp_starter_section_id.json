@@ -1,0 +1,52 @@
+{
+    "key": "group_altrd8_wp_starter_section_id",
+    "title": "Component - Section ID",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_si_section_id",
+            "label": "Section ID",
+            "name": "section_id",
+            "type": "text",
+            "instructions": "Optional HTML id for in-page anchor links (e.g. `#team`). You are responsible for keeping this value unique on each page — duplicate IDs break navigation and accessibility.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "#",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Reusable section anchor id. Cloned into block field groups as needed; not assigned to any post type directly.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1789030279
+}

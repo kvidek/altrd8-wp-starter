@@ -1,0 +1,48 @@
+/**
+ * Colors - map
+ * used for generating css variables
+ */
+$settings-colors: (
+    "white": #f3f5fa,
+    "white-0": rgba(#f3f5fa, 0),
+    "white-10": rgba(#f3f5fa, 0.1),
+    "white-20": rgba(#f3f5fa, 0.2),
+    "white-30": rgba(#f3f5fa, 0.3),
+    "white-40": rgba(#f3f5fa, 0.4),
+    "white-50": rgba(#f3f5fa, 0.5),
+    "white-60": rgba(#f3f5fa, 0.6),
+    "white-70": rgba(#f3f5fa, 0.7),
+    "white-80": rgba(#f3f5fa, 0.8),
+    "white-90": rgba(#f3f5fa, 0.9),
+    "white-100": rgba(#f3f5fa, 1),
+    "black": #010416,
+    "black-0": rgba(#010416, 0),
+    "black-10": rgba(#010416, 0.1),
+    "black-20": rgba(#010416, 0.2),
+    "black-30": rgba(#010416, 0.3),
+    "black-40": rgba(#010416, 0.4),
+    "black-50": rgba(#010416, 0.5),
+    "black-60": rgba(#010416, 0.6),
+    "black-70": rgba(#010416, 0.7),
+    "black-80": rgba(#010416, 0.8),
+    "black-90": rgba(#010416, 0.9),
+    "black-100": rgba(#010416, 1),
+    "focus-indicator-divider-color": #f3f5fa,
+    "focus-indicator-color": #010416,
+    "red": #ff0000,
+
+    /**
+     * Brand palette — from Figma "Colors" board (TransactionTree page,
+     * node 2496:119). Semantic names match the color_scheme ACF component
+     * (group_altrd8_wp_starter_color_scheme.json).
+     */
+    "light": #ece9e2,
+    "off-light": #ece9e2,
+    "off-light-alt": #ffdba6,
+    "tint": #d2e0dc,
+    "tint-alt": #74d5a2,
+    "accent": #763df1,
+    "dark": #093921,
+    "dark-alt": #4c9b9d,
+    "off-dark": #010416,
+);

@@ -1,0 +1,71 @@
+{
+    "key": "group_altrd8_wp_starter_section_borders",
+    "title": "Component - Section borders",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_sb_border_top",
+            "label": "Border top",
+            "name": "border_top",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_altrd8_wp_starter_sb_border_bottom",
+            "label": "Border bottom",
+            "name": "border_bottom",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Reusable section border toggles. Cloned into block field groups; not assigned to any post type directly. Emits .u-border-top/.u-border-bottom (static/scss/utilities/_utilities.section-borders.scss), colored from the active .u-color-scheme-* --cs-border custom property.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1789030279
+}

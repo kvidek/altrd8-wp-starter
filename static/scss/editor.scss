@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/**
+ * Block editor styles.
+ *
+ * Imports the full frontend stylesheet tree (same layers as style.scss) so
+ * the block editor canvas preview matches the front end, then layers on a
+ * few editor-only overrides below. Compiled as its own webpack entry
+ * (editor.css) and enqueued only in wp-admin via
+ * App\bundles\Altrd8WpStarterAssets::register_editor() — never on the
+ * front end.
+ *
+ * Ported from Villa Argentina's resources/css/editor.scss. That project's
+ * Luge reveal-on-scroll overrides are dropped here — this stack has no
+ * scroll-animation library (see .claude/rules/frontend-animations.md).
+ */
+
+@use "tools/tools.index";
+@use "settings/settings.index";
+@use "generics/generics.index";
+@use "elements/elements.index";
+@use "objects/objects.index";
+@use "components/components.index";
+@use "utilities/utilities.index";
+@use "vendors/vendors.index";
+
+.wp-block {
+    max-width: 80rem !important;
+
+    a,
+    button {
+        pointer-events: none;
+    }
+
+    .c-media-loader {
+        display: none;
+    }
+}

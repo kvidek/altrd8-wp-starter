@@ -1,0 +1,176 @@
+{
+    "key": "group_altrd8_wp_starter_component_bg_gradient",
+    "title": "Component - BG Gradient",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_bgg_enabled",
+            "label": "Enabled",
+            "name": "enabled",
+            "type": "true_false",
+            "instructions": "Show a soft background gradient blob behind this section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_altrd8_wp_starter_bgg_color",
+            "label": "Color",
+            "name": "color",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_bgg_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "off-light": "Off Light",
+                "tint": "Tint",
+                "dark": "Dark"
+            },
+            "default_value": "tint",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_bgg_horizontal_alignment",
+            "label": "Horizontal Alignment",
+            "name": "horizontal_alignment",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_bgg_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_bgg_vertical_alignment",
+            "label": "Vertical Alignment",
+            "name": "vertical_alignment",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_bgg_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "center": "Center",
+                "bottom": "Bottom"
+            },
+            "default_value": "top",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_bgg_size",
+            "label": "Size",
+            "name": "size",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_bgg_enabled",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large"
+            },
+            "default_value": "medium",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Reusable soft background-gradient blob behind a section. Cloned into block field groups; not assigned to any post type directly. Rendered via partials/components/bg-gradient.php, styled by static/scss/components/common/_components.bg-gradient.scss. Colors from Figma's \"Gradients\" board (TransactionTree page, node 2497:135), remapped to the off-light/tint brand tokens.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1789661025
+}

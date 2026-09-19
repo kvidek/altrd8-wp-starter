@@ -1,0 +1,21 @@
+.c-intro-block {
+    &__eyebrow {
+        margin-bottom: var(--s-20);
+    }
+
+    &__title {
+        margin-bottom: var(--s-30);
+    }
+
+    &__text {
+        max-width: 720px;
+    }
+
+    &__ctas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--s-20);
+        margin-top: var(--s-30);
+    }
+}

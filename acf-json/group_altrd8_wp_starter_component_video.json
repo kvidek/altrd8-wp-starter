@@ -1,0 +1,287 @@
+{
+    "key": "group_altrd8_wp_starter_component_video",
+    "title": "Component - Video",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_component_video_source",
+            "label": "Source",
+            "name": "source",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "file": "File",
+                "url": "URL"
+            },
+            "default_value": "file",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_qhd_video",
+            "label": "QHD Video",
+            "name": "qhd_video",
+            "type": "file",
+            "instructions": "2000px viewport and up.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_fhd_video",
+            "label": "FHD Video",
+            "name": "fhd_video",
+            "type": "file",
+            "instructions": "1141px viewport and up. Required for playback.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_hd_video",
+            "label": "HD Video",
+            "name": "hd_video",
+            "type": "file",
+            "instructions": "641px viewport and up.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_sd_video",
+            "label": "SD Video",
+            "name": "sd_video",
+            "type": "file",
+            "instructions": "640px viewport and below.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "file"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_qhd_video_url",
+            "label": "QHD Video URL",
+            "name": "qhd_video_url",
+            "type": "url",
+            "instructions": "2000px viewport and up.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_fhd_video_url",
+            "label": "FHD Video URL",
+            "name": "fhd_video_url",
+            "type": "url",
+            "instructions": "1141px viewport and up. Required for playback.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_hd_video_url",
+            "label": "HD Video URL",
+            "name": "hd_video_url",
+            "type": "url",
+            "instructions": "641px viewport and up.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_sd_video_url",
+            "label": "SD Video URL",
+            "name": "sd_video_url",
+            "type": "url",
+            "instructions": "640px viewport and below.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_altrd8_wp_starter_component_video_source",
+                        "operator": "==",
+                        "value": "url"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_poster",
+            "label": "Poster",
+            "name": "poster",
+            "type": "image",
+            "instructions": "Single poster image. Resized per breakpoint via App\\helpers\\ImageHelper.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_altrd8_wp_starter_component_video_alt",
+            "label": "Alt",
+            "name": "alt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Cloned into blocks for responsive video (QHD, FHD, HD, SD). Normalized by App\\helpers\\VideoHelper into args for get_responsive_video(). Not assigned to any post type directly.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1788340747
+}

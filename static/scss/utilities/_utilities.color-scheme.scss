@@ -1,0 +1,73 @@
+/**
+ * Sets --cs-bg/--cs-text/--cs-border and applies background-color/color.
+ * Read by blocks via the "Color Scheme" ACF clone (see App\blocks\BlockSettings).
+ *
+ * Values are the brand palette from Figma's "Colors" board (TransactionTree
+ * page, node 2496:119) — see $settings-colors in
+ * static/scss/settings/_settings.color.scss.
+ */
+.u-color-scheme-none {
+    // Same as .u-color-scheme-light (text/border) but no background fill —
+    // lets whatever sits behind the section (page background, a parent's
+    // color scheme, a bg-gradient blob) show through.
+    --cs-bg: transparent;
+    --cs-text: var(--dark);
+    --cs-border: var(--black-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-light {
+    --cs-bg: var(--light);
+    --cs-text: var(--dark);
+    --cs-border: var(--black-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-off-light {
+    --cs-bg: var(--off-light);
+    --cs-text: var(--dark);
+    --cs-border: var(--black-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-tint {
+    --cs-bg: var(--tint);
+    --cs-text: var(--dark);
+    --cs-border: var(--black-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-accent {
+    --cs-bg: var(--accent);
+    --cs-text: var(--light);
+    --cs-border: var(--white-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-dark {
+    --cs-bg: var(--dark);
+    --cs-text: var(--light);
+    --cs-border: var(--white-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}
+
+.u-color-scheme-off-dark {
+    --cs-bg: var(--off-dark);
+    --cs-text: var(--light);
+    --cs-border: var(--white-20);
+
+    background-color: var(--cs-bg);
+    color: var(--cs-text);
+}

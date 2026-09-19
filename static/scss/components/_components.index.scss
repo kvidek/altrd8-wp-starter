@@ -1,0 +1,84 @@
+/**
+ * Components
+ */
+@forward "common/components.bg-gradient";
+@forward "common/components.loader";
+@forward "common/components.announcement-bar";
+@forward "common/components.mobile-navigation";
+@forward "common/components.navigation";
+@forward "common/components.hamburger";
+@forward "common/components.media-loader";
+@forward "common/components.media-overlay";
+@forward "common/components.media-trigger";
+@forward "common/components.responsive-media";
+@forward "common/components.breadcrumbs";
+@forward "common/components.button";
+@forward "common/components.link";
+@forward "common/components.spinner";
+@forward "common/components.content-loader";
+@forward "common/components.accordion";
+@forward "common/components.tag";
+@forward "common/components.badge";
+@forward "common/components.slider-fraction";
+@forward "common/components.slider-navigation";
+@forward "common/components.slider-pagination";
+@forward "common/components.slider-scrollbar";
+@forward "common/components.pagination";
+@forward "common/components.social-icons";
+@forward "common/components.article-share";
+
+/**
+ * Cards
+ */
+@forward "cards/components.article-card";
+
+/**
+ * Forms
+ */
+@forward "forms/components.form";
+@forward "forms/components.newsletter-form";
+@forward "forms/components.contact-form";
+
+/**
+ * Tables
+ */
+@forward "tables/components.table";
+
+/**
+ * Sections
+ */
+@forward "sections/components.header";
+@forward "sections/components.footer";
+@forward "sections/components.archive-header";
+@forward "sections/components.archive";
+@forward "sections/components.article-header";
+@forward "sections/components.article";
+@forward "sections/components.page-header";
+@forward "sections/components.page";
+@forward "sections/components.core-block";
+@forward "sections/components.404";
+@forward "sections/components.faq";
+@forward "sections/components.contact";
+
+/**
+ * Modules
+ */
+@forward "modules/components.module-name-module";
+
+/**
+ * Gutenberg blocks
+ */
+@forward "blocks/components.block-name-block";
+@forward "blocks/components.intro-block";
+@forward "blocks/components.media-with-content-block";
+
+/**
+ * Modals
+ */
+@forward "modals/components.modal";
+@forward "modals/components.newsletter-modal";
+
+/**
+ * Drawers
+ */
+@forward "drawers/components.drawer-name-drawer";

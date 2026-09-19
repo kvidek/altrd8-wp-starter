@@ -1,0 +1,52 @@
+{
+    "key": "group_altrd8_wp_starter_menu_item_spacer",
+    "title": "Menu Item - Spacer",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_menu_item_spacer",
+            "label": "Spacer",
+            "name": "spacer",
+            "type": "true_false",
+            "instructions": "Renders this menu item as an empty separator instead of a link. Only takes effect on Footer Menu items nested under a top-level column (not the column headings themselves) — see partials/layout/footer.php.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "ACF's nav_menu_item location applies to every menu item across every menu (no per-location scoping in ACF itself) — the \"only Footer sub-items\" restriction is enforced in partials/layout/footer.php, not here.",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "menus": "Menus"
+    },
+    "modified": 1789043378
+}

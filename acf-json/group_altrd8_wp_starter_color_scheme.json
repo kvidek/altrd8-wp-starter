@@ -1,0 +1,60 @@
+{
+    "key": "group_altrd8_wp_starter_color_scheme",
+    "title": "Component - Color Scheme",
+    "fields": [
+        {
+            "key": "field_altrd8_wp_starter_cs_color_scheme",
+            "label": "Color Scheme",
+            "name": "color_scheme",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "light": "Light",
+                "off-light": "Off Light",
+                "tint": "Tint",
+                "accent": "Accent",
+                "dark": "Dark",
+                "off-dark": "Off Dark"
+            },
+            "default_value": "light",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Reusable color scheme setting. Cloned into block field groups; not assigned to any post type directly. Emits .u-color-scheme-{value} (static/scss/utilities/_utilities.color-scheme.scss), which sets --cs-bg/--cs-text/--cs-border from the brand palette (static/scss/settings/_settings.color.scss) extracted from Figma's \"Colors\" board (TransactionTree page, node 2496:119).",
+    "show_in_rest": 0,
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "acfe_categories": {
+        "components": "Components"
+    },
+    "modified": 1789033554
+}

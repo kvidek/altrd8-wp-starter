@@ -1,0 +1,94 @@
+@use "../../tools/tools.index" as tools;
+
+/**
+ * Soft decorative background-gradient blob (radial-gradient, not a blurred
+ * shape — cheaper to render and scales cleanly). Requires `position:
+ * relative` on its containing element (every `.o-section` already has it).
+ * Bleeds past its container's edges by design when aligned to a corner; add
+ * `overflow: hidden` on the container if a block wants it clipped instead.
+ */
+.c-bg-gradient {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+
+    // Always defined here (0, i.e. no offset) so --h-left/--h-right/--v-top/
+    // --v-bottom below don't need to redeclare them — only the --center
+    // variants override away from 0. Keeps devtools from showing these as
+    // undefined for the non-centered cases.
+    --bgg-tx: -50%;
+    --bgg-ty: -50%;
+    border-radius: 50%;
+    transform: translate(var(--bgg-tx), var(--bgg-ty));
+
+    /**
+     * Color
+     */
+    &--off-light {
+        // background: radial-gradient(circle at center, var(--off-light) 0%, transparent 70%);
+        background-color: var(--off-light-alt);
+        filter: blur(952px);
+    }
+
+    &--tint {
+        // background: radial-gradient(circle at center, var(--tint) 0%, transparent 70%);
+        background-color: var(--tint-alt);
+        filter: blur(952px);
+    }
+
+    &--dark {
+        background-color: var(--dark-alt);
+        filter: blur(952px);
+    }
+
+    /**
+     * Size — diameter
+     */
+    &--small {
+        @include tools.fluid-value("width", null, 540px);
+        @include tools.fluid-value("height", null, 540px);
+    }
+
+    &--medium {
+        @include tools.fluid-value("width", null, 720px);
+        @include tools.fluid-value("height", null, 720px);
+    }
+
+    &--large {
+        @include tools.fluid-value("width", null, 1080px);
+        @include tools.fluid-value("height", null, 1080px);
+    }
+
+    /**
+     * Horizontal alignment
+     */
+    &--h-left {
+        left: 0;
+    }
+
+    &--h-center {
+        left: 50%;
+    }
+
+    &--h-right {
+        right: 0;
+
+        --bgg-tx: 50%;
+    }
+
+    /**
+     * Vertical alignment
+     */
+    &--v-top {
+        top: 0;
+    }
+
+    &--v-center {
+        top: 50%;
+    }
+
+    &--v-bottom {
+        bottom: 0;
+        --bgg-ty: 50%;
+    }
+}

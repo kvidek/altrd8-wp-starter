@@ -1,0 +1,216 @@
+@use "../../tools/tools.index" as tools;
+
+.c-responsive-media {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &:has(.c-responsive-media__inner--auto) {
+        width: unset;
+    }
+
+    &--background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__inner {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        /**
+         * Aspect ratio modifiers
+         */
+        &--1-1 {
+            aspect-ratio: 1 / 1;
+        }
+
+        &--2-1 {
+            aspect-ratio: 2 / 1;
+        }
+
+        &--1-2 {
+            aspect-ratio: 1 / 2;
+        }
+
+        &--3-1 {
+            aspect-ratio: 3 / 1;
+        }
+
+        &--1-3 {
+            aspect-ratio: 1 / 3;
+        }
+
+        &--3-2 {
+            aspect-ratio: 3 / 2;
+        }
+
+        &--2-3 {
+            aspect-ratio: 2 / 3;
+        }
+
+        &--4-3 {
+            aspect-ratio: 4 / 3;
+        }
+
+        &--3-4 {
+            aspect-ratio: 3 / 4;
+        }
+
+        &--5-3 {
+            aspect-ratio: 5 / 3;
+        }
+
+        &--3-5 {
+            aspect-ratio: 3 / 5;
+        }
+
+        &--5-4 {
+            aspect-ratio: 5 / 4;
+        }
+
+        &--4-5 {
+            aspect-ratio: 4 / 5;
+        }
+
+        &--6-5 {
+            aspect-ratio: 6 / 5;
+        }
+
+        &--5-6 {
+            aspect-ratio: 5 / 6;
+        }
+
+        &--7-6 {
+            aspect-ratio: 7 / 6;
+        }
+
+        &--6-7 {
+            aspect-ratio: 6 / 7;
+        }
+
+        &--8-7 {
+            aspect-ratio: 8 / 7;
+        }
+
+        &--7-8 {
+            aspect-ratio: 7 / 8;
+        }
+
+        &--9-8 {
+            aspect-ratio: 9 / 8;
+        }
+
+        &--8-9 {
+            aspect-ratio: 8 / 9;
+        }
+
+        &--16-9 {
+            aspect-ratio: 16 / 9;
+        }
+
+        &--9-16 {
+            aspect-ratio: 9 / 16;
+        }
+
+        &--16-10 {
+            aspect-ratio: 16 / 10;
+        }
+
+        &--10-16 {
+            aspect-ratio: 10 / 16;
+        }
+
+        &--auto {
+            aspect-ratio: unset;
+            height: auto;
+
+            .c-responsive-media__img,
+            .c-responsive-media__video,
+            iframe,
+            object,
+            embed {
+                width: revert-layer;
+                position: relative;
+            }
+        }
+
+        &--adopt {
+            aspect-ratio: unset;
+            height: 100%;
+        }
+
+        /**
+         * Loaded state
+         */
+        &[loaded] {
+            > .c-embed-video__trigger {
+                display: none;
+            }
+        }
+    }
+
+    &__img,
+    &__video,
+    iframe,
+    object,
+    embed {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        /**
+         * Object fit modifiers
+         */
+        &--cover {
+            object-fit: cover;
+        }
+
+        &--contain {
+            object-fit: contain;
+        }
+
+        /**
+         * Object position modifiers
+         */
+        &--center {
+            object-position: center;
+        }
+
+        &--top {
+            object-position: top;
+        }
+
+        &--bottom {
+            object-position: bottom;
+        }
+
+        &--left {
+            object-position: left;
+        }
+
+        &--right {
+            object-position: right;
+        }
+
+        /**
+         * Loaded state
+         */
+        &.is-loaded {
+            + .c-media-loader {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}

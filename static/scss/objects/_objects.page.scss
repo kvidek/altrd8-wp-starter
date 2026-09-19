@@ -1,0 +1,6 @@
+.o-page {
+    // .c-navigation-wrapper is position: fixed — offset page content so it
+    // doesn't render underneath it.
+    padding-top: var(--height-navigation);
+    overflow: hidden;
+}

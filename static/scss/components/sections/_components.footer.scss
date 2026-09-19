@@ -1,0 +1,157 @@
+@use "../../tools/tools.index" as tools;
+
+.o-footer-wrapper {
+    @include tools.fluid-value("padding-top", "s-60");
+    @include tools.fluid-value("padding-bottom", "s-60");
+}
+
+.c-footer {
+    background-color: var(--dark);
+    color: var(--light);
+
+    @include tools.fluid-value("border-radius", null, 32px);
+    @include tools.fluid-value("padding", "s-60");
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--s-40) var(--s-30);
+        padding-bottom: var(--s-60);
+    }
+
+    &__column {
+        display: flex;
+        flex: 1 1 140px;
+        flex-direction: column;
+        gap: var(--s-15);
+        min-width: 140px;
+
+        // Mobile: one full-width, collapsible column per row instead of a
+        // multi-column wrap (see .c-footer__column-toggle below).
+        @include tools.mq(lg) {
+            flex: 1 1 100%;
+            padding-bottom: var(--s-20);
+            border-bottom: 1px solid var(--white-20);
+        }
+    }
+
+    &__column-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s-15);
+    }
+
+    &__column-heading {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.5;
+
+        @include tools.hover {
+            opacity: 0.8;
+        }
+
+        @include tools.focus;
+    }
+
+    &__column-toggle {
+        @include tools.button-reset;
+
+        & {
+            display: none;
+            position: relative;
+            flex: none;
+            width: var(--s-30);
+            height: var(--s-30);
+            color: inherit;
+        }
+
+        @include tools.focus;
+
+        @include tools.mq(lg) {
+            display: inline-flex;
+        }
+
+        span {
+            display: block;
+            width: 7px;
+            height: 7px;
+            border-right: 2px solid currentcolor;
+            border-bottom: 2px solid currentcolor;
+            transform: rotate(45deg);
+            transition: tools.get-transition(slide);
+        }
+
+        // Matches .c-mobile-navigation__toggle's convention: collapsed
+        // points down (default), expanded points up (.is-active).
+        .is-active & span {
+            transform: rotate(-135deg);
+        }
+    }
+
+    &__column-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--s-10);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        // AccordionAnimation.js only toggles the panel's inline max-height on
+        // click — the collapsed baseline (and the initially-active escape
+        // hatch) has to come from CSS, same as .c-accordion__panel.
+        @include tools.mq(lg) {
+            max-height: 0;
+            overflow: hidden;
+            transition: tools.get-transition(slide);
+
+            .is-initially-active & {
+                max-height: none;
+            }
+        }
+    }
+
+    &__column-item {
+        &.is-active {
+            .c-footer__column-link {
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__column-link {
+        color: inherit;
+        text-decoration: none;
+
+        @include tools.hover {
+            opacity: 0.7;
+        }
+
+        @include tools.focus;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--s-15);
+        padding-top: var(--s-30);
+        border-top: 1px solid var(--white-20);
+
+        @include tools.mq(sm-md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__logo {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &__copyright {
+        opacity: 0.5;
+    }
+}

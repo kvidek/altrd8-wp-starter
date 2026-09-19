@@ -1,0 +1,95 @@
+@use "../../tools/tools.index" as tools;
+
+.c-media-with-content-block {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+
+    .o-section--highlight-content & {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        grid-column: 2;
+        grid-row: 1;
+        padding-left: tools.percentage(2, 10);
+        padding-right: tools.percentage(2, 10);
+
+        @include tools.mq(lg-xl) {
+            padding-left: tools.percentage(1, 10);
+            padding-right: tools.percentage(1, 10);
+        }
+
+        @include tools.mq(md-lg) {
+            padding: var(--s-60) tools.percentage(1, 24);
+        }
+
+        // Simplified vs. Villa Argentina's per-scheme highlight-panel token
+        // map — this project doesn't have that alt-shade token set yet, so
+        // the panel just borrows the section's own --cs-bg/--cs-text/--cs-border.
+        .o-section--highlight-content & {
+            margin-top: var(--s-90);
+            padding-top: var(--s-90);
+            padding-bottom: var(--s-90);
+            background-color: var(--cs-bg);
+            color: var(--cs-text);
+            border: 1px solid var(--cs-border, var(--black-20));
+        }
+    }
+
+    &__media {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    &__eyebrow {
+        margin-bottom: var(--s-15);
+    }
+
+    &__text {
+        margin-top: var(--s-30);
+        max-width: tools.em(480px, 16px);
+    }
+
+    &__ctas {
+        margin-top: var(--s-40);
+    }
+
+    &--right {
+        grid-template-columns: 1fr 1.4fr;
+
+        .o-section--highlight-content & {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .c-media-with-content-block__content {
+            grid-column: 1;
+        }
+
+        .c-media-with-content-block__media {
+            grid-column: 2;
+        }
+    }
+
+    @include tools.mq(md-lg) {
+        &,
+        &--right {
+            grid-template-columns: 1fr;
+        }
+
+        &__content,
+        &--right .c-media-with-content-block__content {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        &__media,
+        &--right .c-media-with-content-block__media {
+            grid-column: 1;
+            grid-row: 2;
+        }
+    }
+}

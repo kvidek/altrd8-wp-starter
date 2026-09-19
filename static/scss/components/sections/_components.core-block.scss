@@ -1,0 +1,9 @@
+/**
+ * Wraps each top-level core block (paragraph, heading, list, image, quote,
+ * buttons, block) dropped directly into a page's content. Modifier is the
+ * block's kebab-case slug, e.g. .c-core-block--quote.
+ * See app/blocks/wrap-core-blocks.php.
+ */
+.c-core-block {
+    max-width: 800px;
+}
