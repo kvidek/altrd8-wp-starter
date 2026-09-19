@@ -17,9 +17,9 @@
  *   snake   cool_project_2026   ACF group/field keys, PHP constants
  *   Pascal  CoolProject2026     PHP class names (e.g. CoolProject2026Assets)
  *
- * It also renames files whose names contain any of them, regenerates the
- * update-checker `Identifier` in style.css, drops starter-only files and runs
- * sanity checks. node_modules/, vendor/ and static/dist/ are never touched.
+ * It also renames files whose names contain any of them, generates a fresh
+ * update-checker `Identifier` (style.css header and the URL in app/core/Core.php),
+ * drops starter-only files and runs sanity checks. node_modules/, vendor/ and static/dist/ are never touched.
  */
 
 import { spawnSync } from "node:child_process";
@@ -69,13 +69,20 @@ if (oldSlug === slug) {
     fail(`the theme is already named "${slug}".`);
 }
 
-// Longest/most specific first is unnecessary (the three casings never overlap),
-// but the repo URL contains the kebab slug, so it must be replaced before it.
+// The update-checker identifier (services.bfs.wtf) is identifying the theme, so a
+// project must not inherit the starter's. It lives in style.css and in Core.php.
+const oldIdentifier = (styleCss.match(/^Identifier:\s*(\S+)/m) || [])[1];
+
+// The casings never overlap, so order doesn't matter (the repo URL, which does
+// contain the kebab slug, is replaced separately and before these).
 const casings = [
     [pascal(oldSlug), pascal(slug)],
     [snake(oldSlug), snake(slug)],
     [oldSlug, slug],
 ];
+if (oldIdentifier) {
+    casings.push([oldIdentifier, randomBytes(16).toString("hex")]);
+}
 
 const deployPath = path.join(THEME_DIR, "deploy.php");
 const oldRepoUrl = fs.existsSync(deployPath)
@@ -140,12 +147,10 @@ for (const file of walk(THEME_DIR)) {
 }
 console.log(`Renamed ${renamedFiles} files.`);
 
-// ------------------------------------- 3. update-checker identifier + cleanup
-const newStyleCss = fs
-    .readFileSync(styleCssPath, "utf8")
-    .replace(/^Identifier:.*$/m, `Identifier: ${randomBytes(16).toString("hex")}`);
-fs.writeFileSync(styleCssPath, newStyleCss);
-console.log("Generated a new update-checker Identifier in style.css.");
+// ------------------------------------------------------------ 3. cleanup
+if (oldIdentifier) {
+    console.log("Generated a new update-checker Identifier (style.css + app/core/Core.php).");
+}
 
 for (const name of STARTER_ONLY_FILES) {
     const target = path.join(THEME_DIR, name);
